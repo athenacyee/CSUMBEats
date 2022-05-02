@@ -1,0 +1,46 @@
+
+<%- include('partials/nav.ejs') %>
+<body>
+
+<br>
+  <div>
+ <h2><a href="/addProduct">Add New Product</a></h2>  
+ </div>
+  <br>
+
+  
+  <h2> Edit Products below </h2>
+  <select id="productSelect" name="product">
+  <% for (let i=0; i < product.length; i++) {%>
+    <option value="<%= product[i].product_id %>"><%= product[i].name %> </option>
+  <%}%>
+  </select>
+  <button id="editBtn">Edit</button>
+
+
+<div id="EditProduct" class="modal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Edit Product Details</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div id="productInfo"></div>
+        Name:<input type="text" id="name" class="form-control" placeholder="name"> <br>
+        Price:<input type="number" step=".01" placeholder="price" id="price"> <br>
+        Description:<input type="text" id="description" class="form-control" placeholder="description"> <br>
+        Stock: <input id="stock" type="number" placeholder="stock"> <br>
+        Image: <input id="image" type="text" placeholder="image">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" id="edit_btn">Edit</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="/js/updateProduct_function.js">
+</script>
+</body>

@@ -1,0 +1,47 @@
+<%- include('partials/nav.ejs') %>
+  
+<body>
+  <h1 id="product_list"> Product List </h1>
+  <br>
+
+  <table id="productTable">
+  <tr>
+  <td id="product"> Product</td>
+  <td id="price"> Price </td>
+  <td id="picture"> Picture </td>
+  </tr>
+  
+  <% for (let i=0; i < product.length; i++) {%>
+  <tr>
+  <td><a href="#" id="<%= product[i].product_id %>"><%= product[i].name%></a>
+  <br><%= product[i].description%></td>
+  <td>$<%= product[i].price%></td>
+  <td><img src="<%= product[i].image %>" width= 200px height=200px></td>
+
+  </tr>
+ <%}%>
+
+
+<div id="productdetails" class="modal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Product Details</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div id="productInfo"></div>
+        Quantity: <input id="input_quantity" type="number" placeholder="Quantity">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" id="submit">Submit</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="/js/productList_function.js">
+</script>
+
+</body>
+</html>

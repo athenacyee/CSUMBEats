@@ -1,0 +1,44 @@
+<%- include('partials/nav.ejs') %>
+  
+<body>
+  <h1> Shopping Cart </h1>
+  <% let totalPrice = 0%>
+  <% if (product.length <= 0 ) {%>
+    Cart is Empty <br><br>
+  <%} else {%>
+  
+    <table id="productTable">
+      <tr>
+        <td> Product</td>
+        <td> </td>
+        <td> Price </td>
+        <td> Quantity </td>
+        <td> Sub Total </td>
+      </tr>
+      <% for (let i=0; i < product.length; i++) {%>
+      <tr>
+        <td><%= product[i].name%></td>
+        <td><img src="<%= product[i].image %>" width= 200px height=200px></td>
+        <td>$<%= product[i].price%></td>
+        <td class="quantity" id="<%= product[i].product_id%>"><%= product[i].quantity%></td>
+        <td> $<%= (product[i].price * product[i].quantity).toFixed(2)%> </td>
+        <% totalPrice = (product[i].price * product[i].quantity) + totalPrice;%>
+      </tr>
+      <%}%>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>Total</td>
+        <td> $<%= totalPrice.toFixed(2)%> </td>
+      </tr>
+      <tr>
+      <td><button id="empty">Empty Cart</button></td>
+      <td><button id="order">Order</button></td>
+      </tr>
+
+  <%}%>
+<script src="/js/shoppingCart_function.js">
+</script>
+  </body>
+</html>

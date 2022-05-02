@@ -1,0 +1,22 @@
+<%- include('partials/nav.ejs') %>
+  
+<body>
+ <br>
+  <a id="update_product" href="/updateProduct"> Update Product </a>
+  <br> 
+  Login to update
+<br>
+  
+ <form action="/login" method="post" id="login_form">
+  Username: <input type="text" name="username"></input>
+  <br>
+  
+  Password: <input type="password" name="password"></input>
+  
+  
+
+  <button id="login_button">Login</button>
+ </form> 
+
+</body>
+</html>

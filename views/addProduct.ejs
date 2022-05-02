@@ -1,0 +1,15 @@
+<%- include('partials/nav.ejs') %>
+<body>
+<h1> Add new Product</h1>
+<form action="/product/new" method="POST">
+
+Name: <input type="text" name="name"> <br>
+Price: <input type="number" step=".01" placeholder="0.00" name="price"> <br>
+Description:<input type="text" name="description"><br>
+Stock: <input type="number" name="stock"> <br>
+Image: <input type="text" name="image"><br>
+
+
+<button>Add Product</button>
+</form>
+</body>

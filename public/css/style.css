@@ -1,0 +1,112 @@
+
+/*Home Page*/
+h1#welcome_title {
+  padding-top: 3em;
+  font-size: 3em;
+  font-style: italic;
+  color: white;
+  font-family: 'Lora', serif;
+   display: center;
+  text-align: center;
+
+  text-emphasis-color: white;
+  text-decoration-line: white;
+}
+
+/*Navigation Bar*/
+nav {
+  text-align: center;
+  background-color: orange;
+  height: 4em;
+  font-family: 'Lora', serif;
+    text-emphasis: bold;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-size: 2em;
+  padding: 1em;
+    text-emphasis: bold;
+}
+
+nav a:hover {
+  color: purple;
+  border-bottom: 2px solid purple;
+  font-size:2em;
+  transition: .9s;
+}
+
+/*Product Table*/
+table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table td, tr {
+  width: 30em;
+  height: auto;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+td#product, td#price, td#picture {
+  font-weight: bold;
+}
+
+h1#product_list {
+  margin-top: 1.5em;
+  margin-bottom: 1em;
+  background-color: orange;
+}
+
+/*Admin Login*/
+a{
+  text-decoration: none;
+  color:white;
+}
+
+form{
+  margin-top: 3em;
+}
+
+form#login_form input {
+  text-align: left;
+  padding: 10px;
+}
+
+button {
+  background-color: rgb(65, 66, 65); /* Green */
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+}
+body{
+  text-align: center;
+  background-color: grey;
+  text-emphasis-color: white;
+  margin: 20px;
+  padding: 30px;
+  font-family: 'Lora', serif;
+}
+#productTable{
+  background-color: orange;
+  padding: 50px;
+  margin: 40px;
+  display:flex;
+}
+h4{
+  padding: 50px;
+  margin: 40px;
+  text-align: center;
+  text-emphasis-color: white;
+
+}
+div{
+  background-color: orange;
+}
+
